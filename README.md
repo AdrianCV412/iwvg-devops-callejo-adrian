@@ -12,3 +12,7 @@
    1. **Import Project**, y seleccionar la carpeta del proyecto.
    1. Marcar **Create Project from external model**, elegir **Maven**.
    1. **Next** … **Finish**.
+
+Badges
+
+[![DevOps](https://github.com/AdrianCV412/iwvg-devops-callejo-adrian/actions/workflows/test-sonar.yml/badge.svg)](https://github.com/AdrianCV412/iwvg-devops-callejo-adrian/actions/workflows/test-sonar.yml)
