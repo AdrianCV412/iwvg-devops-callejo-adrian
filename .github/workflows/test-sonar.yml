@@ -17,7 +17,7 @@ jobs:
       - name: Sonar
         if: success() # always() failure() success()
         run: >
-          run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+          mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
           -Dsonar.projectKey=AdrianCV412_iwvg-devops-callejo-adrian
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
