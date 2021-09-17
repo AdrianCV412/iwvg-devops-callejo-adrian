@@ -17,3 +17,4 @@ Badges
 
 [![DevOps](https://github.com/AdrianCV412/iwvg-devops-callejo-adrian/actions/workflows/test-sonar.yml/badge.svg)](https://github.com/AdrianCV412/iwvg-devops-callejo-adrian/actions/workflows/test-sonar.yml)
 [![BCH compliance](https://bettercodehub.com/edge/badge/AdrianCV412/iwvg-devops-callejo-adrian?branch=master)](https://bettercodehub.com/results/AdrianCV412/iwvg-devops-callejo-adrian)
+[![Heroku broken](https://iwvg-devops-callejo-adrian.herokuapp.com/system/version-badge)](https://iwvg-devops-callejo-adrian.herokuapp.com/swagger-ui.html)
