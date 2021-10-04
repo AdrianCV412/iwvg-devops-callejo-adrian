@@ -1,5 +1,7 @@
 package adrian.callejo.devops;
 
+import java.util.Objects;
+
 /**
  * Conceptos: Las fracciones propias son aquellas cuyo numerador es menor que el denominador
  * <p>
@@ -90,6 +92,19 @@ public class Fraction implements Comparable<Fraction>{
 
     public boolean isProper() {
         return this.numerator < this.denominator;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Fraction fraction = (Fraction) o;
+        return numerator == fraction.numerator && denominator == fraction.denominator;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(numerator, denominator);
     }
 
     public boolean isImproper() {
