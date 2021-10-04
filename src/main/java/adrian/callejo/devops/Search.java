@@ -12,6 +12,13 @@ public class Search {
                 .map(User::getName);
     }
 
+    public Stream<String> findUserFamilyNameBySomeImproperFraction() {
+        return new UsersDatabase().findAll()
+                .filter(user -> user.getFractions().stream()
+                        .anyMatch(Fraction::isImproper))
+                .map(User::getFamilyName);
+    }
+
     public Optional<Fraction> findHighestFraction() {
         return new UsersDatabase().findAll()
                 .flatMap(user -> user.getFractions().stream())

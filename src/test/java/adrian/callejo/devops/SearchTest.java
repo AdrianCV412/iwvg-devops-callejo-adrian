@@ -10,8 +10,14 @@ import java.util.stream.Collectors;
 public class SearchTest {
 
     @Test
-    void testFindUserIdByAnyProperFraction() {
+    void testFindUserNameByAnyProperFraction() {
         assertEquals(List.of("Oscar","Ana","Oscar","Antonio","Paula"), new Search().findUserNameBySomeImproperFraction()
+                .collect(Collectors.toList()));
+    }
+
+    @Test
+    void testFindUserFamilyNameByAnyProperFraction() {
+        assertEquals(List.of("Fernandez","Blanco","López","Blanco","Torres"), new Search().findUserFamilyNameBySomeImproperFraction()
                 .collect(Collectors.toList()));
     }
 
