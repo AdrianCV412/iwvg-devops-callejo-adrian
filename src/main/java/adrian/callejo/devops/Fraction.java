@@ -95,4 +95,12 @@ public class Fraction implements Comparable<Fraction>{
     public boolean isProper() {
         return this.numerator < this.denominator;
     }
+
+    public boolean isImproper() {
+        return this.numerator > this.denominator;
+    }
+
+    public boolean isEquivalent(Fraction fraction) {
+        return this.decimal() == fraction.decimal();
+    }
 }
