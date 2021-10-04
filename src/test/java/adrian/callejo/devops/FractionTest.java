@@ -70,4 +70,16 @@ class FractionTest {
         assertEquals(1,fractionDefault.getNumerator());
         assertEquals(1,fractionDefault.getDenominator());
     }
+
+    @Test
+    void testSetNumerator(){
+        fraction.setNumerator(6);
+        assertEquals(6, fraction.getNumerator());
+    }
+
+    @Test
+    void testSetDenominator(){
+        fraction.setDenominator(6);
+        assertEquals(6, fraction.getDenominator());
+    }
 }

@@ -34,4 +34,15 @@ class UserTest {
         assertEquals("1",user.getId());
     }
 
+    @Test
+    void testSetName(){
+        user.setName("John");
+        assertEquals("John", user.getName());
+    }
+
+    @Test
+    void testSetFamilyName(){
+        user.setFamilyName("Doe");
+        assertEquals("Doe", user.getFamilyName());
+    }
 }
