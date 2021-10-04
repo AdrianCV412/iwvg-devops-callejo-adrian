@@ -69,6 +69,10 @@ public class Fraction implements Comparable<Fraction>{
         return new Fraction(f1.numerator*f2.denominator+f2.numerator* f1.denominator,f1.denominator*f2.denominator);
     }
 
+    public static Fraction substract(Fraction f1, Fraction f2){
+        return new Fraction(f1.numerator*f2.denominator-f2.numerator*f1.denominator,f1.denominator*f2.denominator);
+    }
+
     public boolean isNegative(){
         return this.numerator < 0 ^ this.denominator < 0;
     }
