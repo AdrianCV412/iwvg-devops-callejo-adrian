@@ -67,7 +67,7 @@ class FractionTest {
     @Test
     void testFraction(){
         Fraction fractionDefault = new Fraction();
-        assertEquals(1,fraction.getNumerator());
-        assertEquals(1,fraction.getDenominator());
+        assertEquals(1,fractionDefault.getNumerator());
+        assertEquals(1,fractionDefault.getDenominator());
     }
 }
