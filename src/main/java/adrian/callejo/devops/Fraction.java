@@ -26,7 +26,7 @@ import java.util.Objects;
  * La división de dos fracciones es otra fracción que tiene: Por numerador el producto de los extremos. Por denominador el producto de los
  * medios. Invertir fraccion
  */
-public class Fraction implements Comparable<Fraction>{
+public class Fraction implements Comparable<Fraction> {
 
     private int numerator;
 
@@ -39,6 +39,22 @@ public class Fraction implements Comparable<Fraction>{
 
     public Fraction() {
         this(1, 1);
+    }
+
+    public static Fraction multiply(Fraction f1, Fraction f2) {
+        return new Fraction(f1.numerator * f2.numerator, f1.denominator * f2.denominator);
+    }
+
+    public static Fraction divide(Fraction f1, Fraction f2) {
+        return new Fraction(f1.numerator * f2.denominator, f1.denominator * f2.numerator);
+    }
+
+    public static Fraction add(Fraction f1, Fraction f2) {
+        return new Fraction(f1.numerator * f2.denominator + f2.numerator * f1.denominator, f1.denominator * f2.denominator);
+    }
+
+    public static Fraction substract(Fraction f1, Fraction f2) {
+        return new Fraction(f1.numerator * f2.denominator - f2.numerator * f1.denominator, f1.denominator * f2.denominator);
     }
 
     public int getNumerator() {
@@ -57,33 +73,13 @@ public class Fraction implements Comparable<Fraction>{
         this.denominator = denominator;
     }
 
-    public static Fraction multiply(Fraction f1, Fraction f2){
-        return new Fraction(f1.numerator*f2.numerator,f1.denominator*f2.denominator);
-    }
-
-    public static Fraction divide(Fraction f1, Fraction f2){
-        return new Fraction(f1.numerator*f2.denominator,f1.denominator*f2.numerator);
-    }
-
-    public static Fraction add(Fraction f1, Fraction f2){
-        return new Fraction(f1.numerator*f2.denominator+f2.numerator* f1.denominator,f1.denominator*f2.denominator);
-    }
-
-    public static Fraction substract(Fraction f1, Fraction f2){
-        return new Fraction(f1.numerator*f2.denominator-f2.numerator*f1.denominator,f1.denominator*f2.denominator);
-    }
-
-    public boolean isNegative(){
-        return this.numerator < 0 ^ this.denominator < 0;
-    }
-
     public double decimal() {
         return (double) numerator / denominator;
     }
 
     @Override
     public int compareTo(Fraction f) {
-        return (int) (this.decimal()-f.decimal());
+        return (int) (this.decimal() - f.decimal());
     }
 
     @Override
