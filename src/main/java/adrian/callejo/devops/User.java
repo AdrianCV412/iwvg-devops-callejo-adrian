@@ -23,6 +23,7 @@ public class User {
         this.familyName = familyName;
         this.fractions = new ArrayList<>();
     }
+
     public User(String id, String name, String familyName, List<Fraction> fractions) {
         this.id = id;
         this.name = name;
