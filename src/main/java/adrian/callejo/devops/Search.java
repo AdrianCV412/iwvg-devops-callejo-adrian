@@ -18,4 +18,11 @@ public class Search {
                 .max(Fraction::compareTo);
     }
 
+    public Optional<Fraction> findFractionSubtractionByUserName(String name) {
+        return new UsersDatabase().findAll()
+                .filter(user -> user.getName().equals(name))
+                .flatMap(user -> user.getFractions().stream())
+                .reduce(Fraction::substract);
+    }
+
 }

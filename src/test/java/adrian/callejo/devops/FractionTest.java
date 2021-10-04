@@ -44,6 +44,13 @@ public class FractionTest {
     }
 
     @Test
+    void testSubstract(){
+        Fraction fractionResult = Fraction.substract(fraction,fraction2);
+        assertEquals(0,fractionResult.getNumerator());
+        assertEquals(8,fractionResult.getDenominator());
+    }
+
+    @Test
     void testMultiply(){
         Fraction fractionResult = Fraction.multiply(fraction,fraction2);
         assertEquals(2,fractionResult.getNumerator());
